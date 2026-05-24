@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "hero": {
+      "type": "kindlitt-hero"
+    },
+    "features": {
+      "type": "kindlitt-features"
+    },
+    "quote": {
+      "type": "kindlitt-quote"
+    }
+  },
+  "order": [
+    "hero",
+    "features",
+    "quote"
+  ]
+}

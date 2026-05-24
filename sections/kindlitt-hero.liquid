@@ -1,0 +1,113 @@
+{{ 'kindlitt.css' | asset_url | stylesheet_tag }}
+
+<section class="kindlitt-page kindlitt-hero">
+  <div class="kindlitt-container kindlitt-hero-grid">
+
+    <div>
+      <div style="margin-bottom:24px;">
+        <span style="
+          background:#f3eadf;
+          color:#8d4b00;
+          padding:8px 16px;
+          border-radius:999px;
+          font-size:.75rem;
+          letter-spacing:.12em;
+          font-weight:700;
+        ">
+          THE SLOW TECH MOVEMENT
+        </span>
+      </div>
+
+      <h1 class="kindlitt-heading-xl">
+        Your Family's
+        <span class="kindlitt-primary" style="font-style:italic;">
+          Reading Sanctuary
+        </span>
+      </h1>
+
+      <p class="kindlitt-muted" style="
+        margin-top:32px;
+        font-size:1.1rem;
+        max-width:580px;
+        line-height:1.8;
+      ">
+        KindLitt is a curated digital ecosystem designed to protect focus,
+        nurture curiosity, and turn every reading session into a shared family achievement.
+      </p>
+
+      <div style="
+        display:flex;
+        gap:16px;
+        margin-top:40px;
+        flex-wrap:wrap;
+      ">
+        <a href="#" class="kindlitt-button kindlitt-button-primary">
+          Explore the Library
+        </a>
+
+        <a href="#" class="kindlitt-button kindlitt-button-secondary">
+          Our Philosophy
+        </a>
+      </div>
+    </div>
+
+    <div class="kindlitt-hero-image">
+
+      <img
+        src="{{ section.settings.hero_image | image_url: width: 1400 }}"
+        alt="KindLitt"
+      >
+
+      <div class="kindlitt-glass">
+        <div style="display:flex;gap:16px;align-items:center;">
+          <div style="
+            width:52px;
+            height:52px;
+            border-radius:50%;
+            background:#ffdcc3;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+          ">
+            ☼
+          </div>
+
+          <div>
+            <div style="
+              color:#8d4b00;
+              font-size:.75rem;
+              font-weight:700;
+              letter-spacing:.1em;
+            ">
+              FOCUS MODE ACTIVE
+            </div>
+
+            <div class="kindlitt-muted">
+              Notifications silenced for 45 minutes.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "KindLitt Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "KindLitt Hero"
+    }
+  ]
+}
+{% endschema %}
